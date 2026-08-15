@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: #ffffff;
+  color: #111827;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes ticker {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes slideFromLeft {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slideFromRight {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.reveal        { opacity: 0; }
+.reveal.visible         { animation: fadeInUp     0.55s ease-out forwards; }
+.reveal.visible.from-left  { animation: slideFromLeft  0.55s ease-out forwards; }
+.reveal.visible.from-right { animation: slideFromRight 0.55s ease-out forwards; }
+.reveal.visible.delay-1 { animation-delay: 0.08s; }
+.reveal.visible.delay-2 { animation-delay: 0.16s; }
+.reveal.visible.delay-3 { animation-delay: 0.24s; }
+.reveal.visible.delay-4 { animation-delay: 0.32s; }
+.reveal.visible.delay-5 { animation-delay: 0.40s; }
+
+.ticker-track { animation: ticker 36s linear infinite; }
+.ticker-track:hover { animation-play-state: paused; }
+
+/* CTA pulse */
+@keyframes ctaPulse {
+  0%, 100% { transform: scale(1);    box-shadow: 0 0 0 0 rgba(255,255,255,0.15); }
+  50%       { transform: scale(1.03); box-shadow: 0 0 0 6px rgba(255,255,255,0); }
+}
+.cta-pulse {
+  animation: ctaPulse 2.4s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta-pulse { animation: none; }
+}
+
+/* Hero Ken Burns — zoom lento e suave */
+@keyframes kenBurns {
+  0%   { transform: scale(1)    translate(0, 0); }
+  33%  { transform: scale(1.08) translate(-1.5%, 0.5%); }
+  66%  { transform: scale(1.12) translate(1%, -1%); }
+  100% { transform: scale(1.06) translate(-0.5%, 1.5%); }
+}
+.hero-kenburns {
+  animation: kenBurns 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-kenburns { animation: none; }
+}

@@ -31,7 +31,7 @@ const SOLUTIONS = [
     icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="5" r="2"/><circle cx="4" cy="19" r="2"/><circle cx="20" cy="19" r="2"/><path d="M12 7v4M12 11l-6 6M12 11l6 6"/></svg>),
   },
   {
-    key: "compras", title: "RV2 Suite: Compras & Aprovações", category: "Gestão de Compras",
+    key: "compras", title: "RV2 Suite: Aprovações", category: "Gestão de Compras",
     desc: "Centraliza o fluxo de aprovação de pedidos de compra com acesso mobile, automação por custo e dashboards analíticos.",
     status: "Disponível", color: "green",
     features: ["Aprovação mobile de pedidos", "Aprovação automática por parâmetros", "Análise de saving"],

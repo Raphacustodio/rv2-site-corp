@@ -35,7 +35,7 @@ const CARDS = [
     ),
   },
   {
-    title: "Especialistas em TOTVS Moda",
+    title: "Especialistas em\nTOTVS Moda",
     tagline: "EXPERTISE",
     description: "Profundo conhecimento e experiência em toda a operação. Implantação, processos, BI, integrações, suporte e treinamento — cobertura completa do ERP mais utilizado pela indústria têxtil brasileira.",
     color: "#374151",
@@ -74,7 +74,7 @@ export function ServiceCards() {
                     <p className="text-xs font-bold tracking-widest uppercase mb-4"
                       style={{ color: card.titleColor ?? card.color }}>{card.tagline}</p>
                     <div className="mb-4" style={{ color: card.titleColor ?? "white" }}>{card.icon}</div>
-                    <h3 className="font-extrabold text-base leading-tight" style={{ color: card.titleColor ?? "white" }}>{card.title}</h3>
+                    <h3 className="font-extrabold text-base leading-tight whitespace-pre-line" style={{ color: card.titleColor ?? "white" }}>{card.title}</h3>
                   </div>
                   {card.href && (
                     <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold text-white transition-colors duration-200"

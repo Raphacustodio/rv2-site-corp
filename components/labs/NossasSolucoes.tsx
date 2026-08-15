@@ -26,7 +26,7 @@ const SOLUTIONS: Solution[] = [
   },
   {
     key: "pacotes", title: "RV2 Suite: Pacotes", category: "Organização e Rastreabilidade",
-    desc: "Organiza, identifica e acompanha os pacotes gerados a partir das Ordens de Produção, conectando o processo físico às informações da OP e garantindo rastreabilidade desde a preparação até o embarque.",
+    desc: "Gerencia os pacotes gerados a partir das Ordens de Produção, conectando o processo físico e garantindo rastreabilidade desde a preparação até o embarque.",
     status: "Disponível", color: "green",
     features: ["Geração de pacotes vinculados às OPs", "Identificação por tipo, tamanho, cor ou composição", "Etiquetas com QR Code (com tipos e modelos)", "Controle de volumes e quantidades", "Rastreabilidade dos pacotes", "Conferência por leitura de QR Code"],
     icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>),

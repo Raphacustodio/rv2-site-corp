@@ -48,7 +48,7 @@ export function StatsSection() {
           <p className="text-xs font-bold tracking-widest uppercase text-green-200 mb-3">NOSSA EXPERIÊNCIA EM NÚMEROS</p>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">
             A assessoria que a{" "}
-            <span className="text-green-200">indústria têxtil</span>{" "}
+            <span className="text-green-200">indústria da moda</span>{" "}
             confia.
           </h2>
         </div>

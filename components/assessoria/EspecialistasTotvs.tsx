@@ -41,7 +41,11 @@ export function EspecialistasTotvs() {
                 className={`reveal ${visible ? `visible delay-${i + 1}` : ""} flex items-center gap-2 px-4 py-4 rounded-xl`}
                 style={{ background: "rgba(255,255,255,0.42)", border: "1px solid rgba(255,255,255,0.52)" }}>
                 <div className="w-2 h-2 rounded-full bg-green-300 shrink-0" />
-                <span className="font-semibold text-white text-sm">{area}</span>
+                <span className="font-semibold text-white text-sm">
+                  {area.includes(" TOTVS Moda") ? (
+                    <>{area.replace(" TOTVS Moda", "")}<span className="sr-only"> TOTVS Moda</span></>
+                  ) : area}
+                </span>
               </div>
             ))}
           </div>

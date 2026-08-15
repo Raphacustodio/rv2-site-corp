@@ -3,7 +3,7 @@ import { useReveal } from "@/hooks/useReveal";
 
 const AREAS = [
   "Implantação", "Processos", "Integrações",
-  "BI", "Suporte", "Treinamentos",
+  "BI TOTVS Moda", "Suporte", "Treinamentos",
 ];
 
 export function EspecialistasTotvs() {

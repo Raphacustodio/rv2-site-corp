@@ -13,7 +13,7 @@ export function CTABanner() {
             <p className="text-xs font-bold tracking-widest uppercase text-green-400 mb-4">VAMOS CONVERSAR</p>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-3">
               Conte com a RV2 para transformar{" "}
-              <span className="text-green-400">sua operação têxtil.</span>
+              <span className="text-green-400">sua operação.</span>
             </h2>
             <p className="text-green-100/80 text-base leading-relaxed">
               Mais de 20 anos de experiência ao lado da indústria têxtil. Assessoria + tecnologia para levar sua empresa ao próximo nível.

@@ -90,7 +90,7 @@ export function NossasSolucoes() {
                 </div>
                 <div>
                   <h3 className="font-extrabold text-gray-900 text-sm leading-tight">{sol.title}</h3>
-                  <p className="text-purple-900/60 text-xs mt-0.5">{sol.category}</p>
+                  <p className="text-xs mt-0.5" style={{ color: "rgba(88,28,135,0.75)" }}>{sol.category}</p>
                 </div>
               </div>
 

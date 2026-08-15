@@ -36,7 +36,7 @@ const CARDS = [
   },
   {
     title: "Especialistas em TOTVS Moda",
-    tagline: "EXPERTISE CERTIFICADA",
+    tagline: "EXPERTISE",
     description: "Profundo conhecimento e experiência em toda a operação. Implantação, processos, BI, integrações, suporte e treinamento — cobertura completa do ERP mais utilizado pela indústria têxtil brasileira.",
     color: "#374151",
     titleColor: "#FB923C",

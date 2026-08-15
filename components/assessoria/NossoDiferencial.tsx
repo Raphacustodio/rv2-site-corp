@@ -27,11 +27,11 @@ export function NossoDiferencial() {
             <div className="flex justify-between w-4/5 mx-auto">
               <a href="#assessoria"
                 className="flex items-center gap-2 px-4 py-2 rounded-xl border-2 border-green-200 text-green-700 font-semibold text-sm hover:bg-green-50 transition-colors duration-200">
-                Conheça RV2 Assessoria →
+                RV2 Assessoria →
               </a>
               <a href="#labs"
                 className="flex items-center gap-2 px-4 py-2 rounded-xl border-2 border-purple-200 text-purple-700 font-semibold text-sm hover:bg-purple-50 transition-colors duration-200">
-                Conheça RV2 Labs →
+                RV2 Labs →
               </a>
             </div>
           </div>

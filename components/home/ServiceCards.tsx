@@ -72,7 +72,7 @@ export function ServiceCards() {
                 <div className="flex flex-col items-start justify-between gap-4 p-7 sm:w-64 lg:w-80 shrink-0 border-b sm:border-b-0 sm:border-r border-gray-700">
                   <div>
                     <p className="text-xs font-bold tracking-widest uppercase mb-4"
-                      style={{ color: card.color + "99" }}>{card.tagline}</p>
+                      style={{ color: card.titleColor ?? card.color }}>{card.tagline}</p>
                     <div className="mb-4" style={{ color: card.titleColor ?? "white" }}>{card.icon}</div>
                     <h3 className="font-extrabold text-lg leading-tight" style={{ color: card.titleColor ?? "white" }}>{card.title}</h3>
                   </div>

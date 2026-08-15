@@ -24,7 +24,7 @@ const CLIENTS: Client[] = [
 
 export function ClientsCarousel() {
   return (
-    <section id="clientes" className="scroll-mt-16 pb-3 overflow-hidden" style={{ background: "#F0FDF4", marginTop: 48 }}>
+    <section id="clientes" className="scroll-mt-16 pb-3 overflow-hidden" style={{ background: "linear-gradient(to bottom, #ffffff 0%, #F0FDF4 100%)", marginTop: 48 }}>
       <p className="text-center text-xs font-bold tracking-widest uppercase text-gray-400 mt-6 mb-6">
         ALGUMAS EMPRESAS QUE FAZEM PARTE DA NOSSA HISTÓRIA
       </p>

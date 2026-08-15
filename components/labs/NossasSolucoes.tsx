@@ -33,9 +33,9 @@ const SOLUTIONS: Solution[] = [
   },
   {
     key: "coleta", title: "RV2 Suite: Carrega & Coleta", category: "Logística Industrial",
-    desc: "Organiza todo o fluxo logístico das OPs, desde a preparação do carregamento até a coleta nos terceiros e o retorno para a empresa.",
+    desc: "Planeje e acompanhe as rotas de carregamento e coleta, conectando motoristas, terceiros e empresa em uma operação logística rastreável e organizada.",
     status: "Disponível", color: "green",
-    features: ["Organização por carregamento", "Confirmação via QR Code", "Rastreabilidade completa"],
+    features: ["Planejamento e gestão de rotas", "Localização e acompanhamento em tempo real", "Distribuição de entregas e coletas", "Controle de ocorrências e reprogramações", "Rastreabilidade de toda a operação"],
     icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>),
   },
   {

@@ -85,7 +85,7 @@ export function NossasSolucoes() {
               {/* Icon + Title */}
               <div className="relative z-10 flex items-center gap-3">
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-                  style={{ background: "rgba(88,28,135,0.5)", color: "rgba(255,255,255,0.95)" }}>
+                  style={{ background: "rgba(88,28,135,0.75)", color: "#fff" }}>
                   {sol.icon}
                 </div>
                 <div>

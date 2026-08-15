@@ -42,8 +42,8 @@ export function Header() {
           <Image
             src="/logos/rv2-logo.png"
             alt="RV2"
-            width={48}
-            height={28}
+            width={0}
+            height={0}
             style={{
               height: 44,
               width: "auto",

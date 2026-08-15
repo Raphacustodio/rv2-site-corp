@@ -7,6 +7,7 @@ const CARDS = [
     tagline: "CONSULTORIA ESPECIALIZADA",
     description: "Consultoria em processos TOTVS Moda. Atuamos em toda a jornada do ERP — do planejamento inicial à evolução contínua — com profundo conhecimento da indústria têxtil.",
     color: "#16A34A",
+    titleColor: "#4ADE80",
     href: "#assessoria",
     icon: (
       <svg width="32" height="32" viewBox="0 0 28 28" fill="none">
@@ -23,6 +24,7 @@ const CARDS = [
     tagline: "SOLUÇÕES TECNOLÓGICAS",
     description: "Desenvolvimento de software próprio que conecta, automatiza e simplifica a operação da indústria têxtil. Cada produto nasce de uma necessidade real identificada nas operações dos nossos clientes.",
     color: "#7C3AED",
+    titleColor: "#A78BFA",
     href: "#labs",
     icon: (
       <svg width="32" height="32" viewBox="0 0 28 28" fill="none">
@@ -37,6 +39,7 @@ const CARDS = [
     tagline: "EXPERTISE CERTIFICADA",
     description: "Profundo conhecimento e experiência em toda a operação. Implantação, processos, BI, integrações, suporte e treinamento — cobertura completa do ERP mais utilizado pela indústria têxtil brasileira.",
     color: "#374151",
+    titleColor: "#FB923C",
     href: undefined,
     icon: (
       <svg width="32" height="32" viewBox="0 0 28 28" fill="none">
@@ -71,7 +74,7 @@ export function ServiceCards() {
                     <p className="text-xs font-bold tracking-widest uppercase mb-4"
                       style={{ color: card.color + "99" }}>{card.tagline}</p>
                     <div className="mb-4">{card.icon}</div>
-                    <h3 className="font-extrabold text-white text-lg leading-tight">{card.title}</h3>
+                    <h3 className="font-extrabold text-lg leading-tight" style={{ color: card.titleColor ?? "white" }}>{card.title}</h3>
                   </div>
                   {card.href && (
                     <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold text-white transition-colors duration-200"

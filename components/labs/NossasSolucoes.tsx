@@ -20,7 +20,7 @@ const SOLUTIONS: Solution[] = [
     key: "notify", title: "RV2 Notify", category: "Comunicação Inteligente",
     desc: "Automatiza a comunicação entre sua empresa, clientes, fornecedores e equipes internas via WhatsApp e e-mail, direto dos eventos do TOTVS Moda.",
     status: "Disponível", color: "green",
-    features: ["Documentos fiscais: envio automático após emissão", "Boletos: disparo com PDF e informações de pagamento", "Cobranças: lembretes e avisos automáticos", "Compras: notificações automáticas aos fornecedores", "Eventos do ERP: disparos conforme necessidade da operação", "Roadmap de outros gatilhos de disparo"],
+    features: ["Documentos fiscais", "Boletos", "Cobranças", "Compras", "Eventos do ERP", "Roadmap de outros gatilhos de disparo"],
     detailImage: "", // coloque aqui o caminho da imagem, ex: "/screenshots/notify-overview.jpeg"
     icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>),
   },

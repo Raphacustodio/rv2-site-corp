@@ -54,9 +54,9 @@ export function Header() {
           <span
             className="text-[13px] font-bold leading-tight"
           >
-            <span style={{ color: "#16A34A" }}>ASSESSORIA</span>
+            <span style={{ color: "#4ADE80" }}>ASSESSORIA</span>
             <span className="text-gray-300 mx-1">+</span>
-            <span style={{ color: "#7C3AED" }}>TECNOLOGIA</span>
+            <span style={{ color: "#A78BFA" }}>TECNOLOGIA</span>
           </span>
         </a>
 

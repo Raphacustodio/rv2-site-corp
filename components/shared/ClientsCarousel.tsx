@@ -42,22 +42,21 @@ export function ClientsCarousel() {
               {c.logo ? (
                 c.crop ? (
                   <div
-                    className="transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
-                    style={{ width: 180, height: 28, overflow: "hidden", position: "relative", flexShrink: 0, opacity: 0.5 }}
+                    className="transition-transform duration-300 group-hover:scale-110"
+                    style={{ width: 180, height: 28, overflow: "hidden", position: "relative", flexShrink: 0 }}
                   >
                     <Image src={c.logo} alt={c.name} fill
-                      className="group-hover:grayscale-0 transition-all duration-300"
-                      style={{ objectFit: "cover", objectPosition: "center 48%", filter: "grayscale(1)" }} />
+                      style={{ objectFit: "cover", objectPosition: "center 48%", filter: "grayscale(1)", opacity: 0.5 }} />
                   </div>
                 ) : (
                   <Image
                     src={c.logo} alt={c.name} width={140} height={60}
-                    className={`transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110 ${c.invert ? "grayscale invert group-hover:grayscale-0 group-hover:invert-0" : "grayscale group-hover:grayscale-0"}`}
-                    style={{ height: (c.logoH ?? 56), width: "auto", maxWidth: 200, objectFit: "contain" }}
+                    className="transition-transform duration-300 group-hover:scale-110"
+                    style={{ height: (c.logoH ?? 56), width: "auto", maxWidth: 200, objectFit: "contain", filter: c.invert ? "grayscale(1) invert(1)" : "grayscale(1)", opacity: 0.5 }}
                   />
                 )
               ) : (
-                <span className="font-bold text-xs tracking-wider text-gray-400 uppercase whitespace-nowrap transition-colors duration-300 group-hover:text-green-700">{c.name}</span>
+                <span className="font-bold text-xs tracking-wider text-gray-400 uppercase whitespace-nowrap transition-transform duration-300 group-hover:scale-110 inline-block">{c.name}</span>
               )}
 
               <span className="text-gray-200 text-xs">✦</span>

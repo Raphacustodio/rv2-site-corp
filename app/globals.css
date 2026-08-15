@@ -42,7 +42,6 @@ body {
 .reveal.visible.delay-5 { animation-delay: 0.40s; }
 
 .ticker-track { animation: ticker 36s linear infinite; }
-.ticker-track:hover { animation-play-state: paused; }
 
 /* CTA pulse */
 @keyframes ctaPulse {

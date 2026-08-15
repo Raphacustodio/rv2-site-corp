@@ -29,15 +29,25 @@ const structuredData = [
 ];
 
 export const metadata: Metadata = {
-  title: "RV2 | Consultoria e BI para TOTVS Moda",
+  title: "RV2 | Consultoria, Suporte e BI para TOTVS Moda",
   description:
-    "Consultoria TOTVS Moda, BI, integrações e soluções para empresas da indústria têxtil e da moda. Conheça a RV2 e evolua seus processos e resultados.",
+    "Consultoria, suporte e BI para TOTVS Moda. Especialistas em implantação, integrações e processos para empresas da indústria têxtil e da moda.",
   keywords: [
     "consultoria TOTVS Moda",
+    "suporte TOTVS Moda",
     "BI TOTVS Moda",
     "especialista TOTVS Moda",
-    "integração TOTVS Moda",
     "implantação TOTVS Moda",
+    "integração TOTVS Moda",
+    "suporte especializado TOTVS Moda",
+    "Power BI TOTVS Moda",
+    "processos TOTVS Moda",
+    "treinamento TOTVS Moda",
+    "indústria têxtil",
+    "indústria da moda",
+    "confecção",
+    "rastreabilidade",
+    "gestão de produção",
   ],
   authors: [{ name: "RV2" }],
   creator: "RV2",
@@ -45,9 +55,9 @@ export const metadata: Metadata = {
     canonical: `${SITE_URL}/`,
   },
   openGraph: {
-    title: "RV2 | Consultoria e BI para TOTVS Moda",
+    title: "RV2 | Consultoria, Suporte e BI para TOTVS Moda",
     description:
-      "Consultoria TOTVS Moda, BI, integrações e soluções para empresas da indústria têxtil e da moda.",
+      "Consultoria, suporte e BI para TOTVS Moda. Especialistas em implantação, integrações e processos para empresas da indústria têxtil e da moda.",
     type: "website",
     url: `${SITE_URL}/`,
     siteName: "RV2",
@@ -63,9 +73,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "RV2 | Consultoria e BI para TOTVS Moda",
+    title: "RV2 | Consultoria, Suporte e BI para TOTVS Moda",
     description:
-      "Consultoria TOTVS Moda, BI, integrações e soluções para empresas da indústria têxtil e da moda.",
+      "Consultoria, suporte e BI para TOTVS Moda. Especialistas em implantação, integrações e processos para empresas da indústria têxtil e da moda.",
     images: [`${SITE_URL}/logos/rv2-logo-transparent.png`],
   },
 };

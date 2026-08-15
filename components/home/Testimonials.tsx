@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const TESTIMONIALS = [
   {
@@ -41,7 +41,7 @@ const N = TESTIMONIALS.length;
 
 function TestimonialCard({ item }: { item: typeof TESTIMONIALS[0] }) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-6 shadow-sm flex flex-col h-full">
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col min-h-[300px] sm:min-h-[280px] lg:min-h-[260px]">
       <QuoteIcon />
       <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-1">{item.text}</p>
       <div className="flex items-center gap-3">
@@ -59,33 +59,36 @@ function TestimonialCard({ item }: { item: typeof TESTIMONIALS[0] }) {
 
 export function Testimonials() {
   const [active, setActive] = useState(0);
+  const [fading, setFading] = useState(false);
+  const activeRef = useRef(0);
+
+  const goTo = (next: number) => {
+    activeRef.current = next;
+    setFading(true);
+    setTimeout(() => { setActive(next); setFading(false); }, 250);
+  };
 
   useEffect(() => {
-    const id = setInterval(() => setActive(i => (i + 1) % N), 6000);
+    const id = setInterval(() => goTo((activeRef.current + 1) % N), 7000);
     return () => clearInterval(id);
   }, []);
 
-  const prev = () => setActive(i => (i === 0 ? N - 1 : i - 1));
-  const next = () => setActive(i => (i + 1) % N);
-
-  const second = (active + 1) % N;
+  const prev = () => goTo(active === 0 ? N - 1 : active - 1);
+  const next = () => goTo((active + 1) % N);
 
   return (
     <section className="pt-6 pb-16" style={{ background: "#F0FDF4" }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div className="w-full max-w-2xl sm:max-w-3xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-10">
         <p className="text-center text-xs font-bold tracking-widest uppercase text-gray-400 mb-8">
           EXPERIÊNCIAS DE CLIENTES
         </p>
 
-        {/* Mobile: 1 por vez */}
-        <div className="sm:hidden mb-6">
+        {/* 1 por vez em todos os tamanhos */}
+        <div
+          className="mb-6 transition-opacity duration-250"
+          style={{ opacity: fading ? 0 : 1 }}
+        >
           <TestimonialCard item={TESTIMONIALS[active]} />
-        </div>
-
-        {/* Desktop: 2 por vez */}
-        <div className="hidden sm:grid grid-cols-2 gap-4 mb-6">
-          <TestimonialCard item={TESTIMONIALS[active]} />
-          <TestimonialCard item={TESTIMONIALS[second]} />
         </div>
 
         {/* Navegação */}
@@ -97,7 +100,7 @@ export function Testimonials() {
 
           <div className="flex gap-2">
             {TESTIMONIALS.map((_, i) => (
-              <button key={i} onClick={() => setActive(i)}
+              <button key={i} onClick={() => goTo(i)}
                 className={`rounded-full transition-all duration-200 ${active === i ? "w-5 h-2 bg-green-600" : "w-2 h-2 bg-gray-300"}`}
                 aria-label={`Depoimento ${i + 1}`}
               />

@@ -56,7 +56,7 @@ export function ClientsCarousel() {
                   />
                 )
               ) : (
-                <span className="font-bold text-xs tracking-wider text-gray-400 uppercase whitespace-nowrap transition-transform duration-300 group-hover:scale-110 inline-block">{c.name}</span>
+                <span className="font-bold text-sm tracking-wider text-gray-400 uppercase whitespace-nowrap transition-transform duration-300 group-hover:scale-110 inline-block">{c.name}</span>
               )}
 
               <span className="text-gray-200 text-xs">✦</span>

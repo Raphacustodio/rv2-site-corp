@@ -164,7 +164,7 @@ export function NossasSolucoes() {
   const [selected, setSelected] = useState<Solution | null>(null);
 
   return (
-    <section ref={ref as React.RefObject<HTMLElement>} id="solucoes" className="py-16 bg-gray-50 border-t border-gray-100 scroll-mt-16">
+    <section ref={ref as React.RefObject<HTMLElement>} id="solucoes" className="py-16 bg-gray-50 border-t border-gray-100 scroll-mt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className={`reveal ${visible ? "visible" : ""} mb-8`}>
           <p className="text-xs font-bold tracking-widest uppercase text-purple-600 mb-1">NOSSAS SOLUÇÕES</p>

@@ -24,7 +24,7 @@ export function NossoDiferencial() {
               Não desenvolvemos tecnologia por tendência.<br />Desenvolvemos tecnologia para resolver problemas reais.
             </p>
             <div className="h-px bg-gradient-to-r from-green-400 to-purple-500 rounded-full w-4/5 mx-auto" />
-            <div className="flex justify-between w-4/5 mx-auto">
+            <div className="flex gap-3 w-4/5 mx-auto">
               <a href="#assessoria"
                 className="flex items-center gap-2 px-4 py-2 rounded-xl border-2 border-green-200 text-green-700 font-semibold text-sm hover:bg-green-50 transition-colors duration-200">
                 RV2 Assessoria →

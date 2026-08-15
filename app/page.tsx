@@ -27,7 +27,7 @@ export default function Home() {
       <NossoDiferencial />
 
       {/* CLIENTES */}
-      <div style={{ marginTop: -2 }}>
+      <div style={{ marginTop: -2, background: "linear-gradient(to bottom, #ffffff 0%, #F0FDF4 100%)" }}>
         <ClientsCarousel />
         <Testimonials />
       </div>

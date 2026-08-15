@@ -81,7 +81,7 @@ export function Testimonials() {
   const next = () => goTo((active + 1) % N);
 
   return (
-    <section className="pt-6 pb-16" style={{ background: "#F0FDF4" }}>
+    <section className="pt-6 pb-16" style={{ background: "transparent" }}>
       <div className="w-full max-w-2xl sm:max-w-3xl lg:max-w-5xl mx-auto px-4 sm:px-6 lg:px-10">
         <p className="text-center text-xs font-bold tracking-widest uppercase text-gray-400 mb-8">
           EXPERIÊNCIAS DE CLIENTES

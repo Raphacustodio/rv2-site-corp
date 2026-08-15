@@ -2,8 +2,8 @@
 import { useReveal } from "@/hooks/useReveal";
 
 const AREAS = [
-  "Implantação", "Processos", "Integrações",
-  "BI TOTVS Moda", "Suporte", "Treinamentos",
+  "Implantação TOTVS Moda", "Processos TOTVS Moda", "Integrações TOTVS Moda",
+  "BI TOTVS Moda", "Suporte TOTVS Moda", "Treinamentos TOTVS Moda",
   "Sustentação TOTVS Moda", "Relatórios TOTVS Moda", "Revitalização TOTVS Moda",
 ];
 

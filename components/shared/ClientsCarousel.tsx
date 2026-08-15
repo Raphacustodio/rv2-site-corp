@@ -32,24 +32,36 @@ export function ClientsCarousel() {
         style={{ maskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)" }}>
         <div className="ticker-track flex w-max items-center gap-0">
           {[...CLIENTS, ...CLIENTS].map((c, i) => (
-            <div key={i} className="flex items-center gap-8 shrink-0 px-6 cursor-pointer"
-              onClick={() => c.href && window.open(c.href, "_blank", "noopener")}>
+            <a
+              key={i}
+              href={c.href ?? "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center gap-8 shrink-0 px-6"
+            >
               {c.logo ? (
                 c.crop ? (
-                  <div style={{ width: 180, height: 28, overflow: "hidden", position: "relative", flexShrink: 0 }}>
+                  <div
+                    className="transition-all duration-300 group-hover:scale-110 group-hover:opacity-100"
+                    style={{ width: 180, height: 28, overflow: "hidden", position: "relative", flexShrink: 0, opacity: 0.5 }}
+                  >
                     <Image src={c.logo} alt={c.name} fill
-                      style={{ objectFit: "cover", objectPosition: "center 48%", filter: "grayscale(1)", opacity: 0.5 }} />
+                      className="group-hover:grayscale-0 transition-all duration-300"
+                      style={{ objectFit: "cover", objectPosition: "center 48%", filter: "grayscale(1)" }} />
                   </div>
                 ) : (
-                  <Image src={c.logo} alt={c.name} width={140} height={60}
-                    style={{ height: (c.logoH ?? 56), width: "auto", maxWidth: 200, objectFit: "contain", filter: c.invert ? "grayscale(1) invert(1)" : "grayscale(1)", opacity: 0.5 }}/>
+                  <Image
+                    src={c.logo} alt={c.name} width={140} height={60}
+                    className={`transition-all duration-300 opacity-50 group-hover:opacity-100 group-hover:scale-110 ${c.invert ? "grayscale invert group-hover:grayscale-0 group-hover:invert-0" : "grayscale group-hover:grayscale-0"}`}
+                    style={{ height: (c.logoH ?? 56), width: "auto", maxWidth: 200, objectFit: "contain" }}
+                  />
                 )
               ) : (
-                <span className="font-bold text-xs tracking-wider text-gray-400 uppercase whitespace-nowrap">{c.name}</span>
+                <span className="font-bold text-xs tracking-wider text-gray-400 uppercase whitespace-nowrap transition-colors duration-300 group-hover:text-green-700">{c.name}</span>
               )}
 
               <span className="text-gray-200 text-xs">✦</span>
-            </div>
+            </a>
           ))}
         </div>
       </div>

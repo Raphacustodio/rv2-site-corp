@@ -61,7 +61,6 @@ const SOLUTIONS = [
 ];
 
 const GRAD = "linear-gradient(135deg, #F5F3FF 0%, #DDD6FE 100%)";
-const HERO_COLOR: Record<string, string> = { green: "#16A34A", purple: "#7C3AED" };
 
 export function NossasSolucoes() {
   const { ref, visible } = useReveal();
@@ -85,12 +84,12 @@ export function NossasSolucoes() {
 
               {/* Icon + Title */}
               <div className="relative z-10 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-                  style={{ background: "rgba(255,255,255,0.45)", color: HERO_COLOR[sol.color] }}>
+                <div className="w-9 h-9 rounded-xl flex items-center justify-center text-purple-900 shrink-0"
+                  style={{ background: "rgba(255,255,255,0.45)" }}>
                   {sol.icon}
                 </div>
                 <div>
-                  <h3 className="font-extrabold text-sm leading-tight" style={{ color: HERO_COLOR[sol.color] }}>{sol.title}</h3>
+                  <h3 className="font-extrabold text-gray-900 text-sm leading-tight">{sol.title}</h3>
                   <p className="text-purple-900/60 text-xs mt-0.5">{sol.category}</p>
                 </div>
               </div>

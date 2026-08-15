@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rv2.com.br/sitemap.xml
+Sitemap: https://rv2.inf.br/sitemap.xml

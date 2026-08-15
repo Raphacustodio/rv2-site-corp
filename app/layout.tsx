@@ -4,7 +4,7 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-const SITE_URL = "https://rv2.com.br";
+const SITE_URL = "https://rv2.inf.br";
 
 const structuredData = [
   {

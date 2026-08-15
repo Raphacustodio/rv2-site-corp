@@ -1,12 +1,27 @@
 "use client";
 import { useReveal } from "@/hooks/useReveal";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
-const SOLUTIONS = [
+type Solution = {
+  key: string;
+  title: string;
+  category: string;
+  desc: string;
+  status: string;
+  color: string;
+  features: string[];
+  icon: React.ReactNode;
+  detailImage?: string;
+};
+
+const SOLUTIONS: Solution[] = [
   {
     key: "notify", title: "RV2 Notify", category: "Comunicação Inteligente",
     desc: "Automatiza a comunicação entre sua empresa, clientes, fornecedores e equipes internas via WhatsApp e e-mail, direto dos eventos do TOTVS Moda.",
     status: "Disponível", color: "green",
     features: ["Boletos — Envio automático com PDF", "Notas Fiscais — Envio após emissão", "Pedidos de Compra — Notificação a fornecedores"],
+    detailImage: "", // coloque aqui o caminho da imagem, ex: "/screenshots/notify-overview.jpeg"
     icon: (<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>),
   },
   {
@@ -61,9 +76,94 @@ const SOLUTIONS = [
 ];
 
 const GRAD = "linear-gradient(135deg, #F5F3FF 0%, #DDD6FE 100%)";
+const ICON_BG = { background: "rgba(88,28,135,0.75)", color: "#fff" };
+const SUBTITLE_COLOR = { color: "rgba(88,28,135,0.75)" };
+
+function SolutionModal({ sol, onClose }: { sol: Solution; onClose: () => void }) {
+  useEffect(() => {
+    const fn = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+    document.addEventListener("keydown", fn);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", fn);
+      document.body.style.overflow = "";
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      style={{ background: "rgba(0,0,0,0.6)", backdropFilter: "blur(4px)", animation: "fadeInUp 0.2s ease-out" }}
+      onClick={onClose}
+    >
+      <div
+        className="relative bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto"
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Fechar */}
+        <button onClick={onClose}
+          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors"
+          aria-label="Fechar">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+            <path d="M18 6L6 18M6 6l12 12"/>
+          </svg>
+        </button>
+
+        {/* Imagem */}
+        {sol.detailImage && (
+          <div className="w-full rounded-t-2xl overflow-hidden bg-gray-100" style={{ maxHeight: 380 }}>
+            <Image src={sol.detailImage} alt={sol.title} width={900} height={500}
+              className="w-full object-cover object-top" />
+          </div>
+        )}
+
+        {/* Conteúdo */}
+        <div className="p-6 sm:p-8">
+          {/* Header */}
+          <div className="flex items-center gap-3 mb-5">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={ICON_BG}>
+              {sol.icon}
+            </div>
+            <div>
+              <h2 className="font-extrabold text-gray-900 text-lg leading-tight">{sol.title}</h2>
+              <p className="text-xs mt-0.5" style={SUBTITLE_COLOR}>{sol.category}</p>
+            </div>
+          </div>
+
+          {/* Descrição */}
+          <p className="text-gray-600 leading-relaxed text-sm mb-6 text-justify">{sol.desc}</p>
+
+          {/* Features */}
+          <div className="border-t border-gray-100 pt-5">
+            <p className="text-xs font-bold tracking-widest uppercase mb-3" style={SUBTITLE_COLOR}>FUNCIONALIDADES</p>
+            <ul className="flex flex-col gap-2">
+              {sol.features.map(f => (
+                <li key={f} className="flex items-start gap-2 text-sm text-gray-700">
+                  <div className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ background: "rgba(88,28,135,0.6)" }} />
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* CTA */}
+          <div className="mt-6 pt-5 border-t border-gray-100">
+            <a href="https://wa.me/5547991458295" target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-white font-bold text-sm transition-colors duration-200"
+              style={{ background: "rgba(88,28,135,0.85)" }}>
+              Falar com especialista →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export function NossasSolucoes() {
   const { ref, visible } = useReveal();
+  const [selected, setSelected] = useState<Solution | null>(null);
+
   return (
     <section ref={ref as React.RefObject<HTMLElement>} id="solucoes" className="py-16 bg-gray-50 border-t border-gray-100 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
@@ -75,41 +175,48 @@ export function NossasSolucoes() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {SOLUTIONS.map((sol, i) => (
             <div key={sol.key}
+              onClick={() => setSelected(sol)}
               className={`reveal ${visible ? `visible delay-${(i % 4) + 1}` : ""} relative overflow-hidden rounded-xl p-4 flex flex-col gap-3 cursor-pointer hover:-translate-y-1 hover:shadow-xl transition-all duration-200`}
               style={{ background: GRAD }}>
 
-              {/* Decorative circles */}
               <div className="absolute -top-6 -right-6 w-28 h-28 rounded-full pointer-events-none" style={{ background: "rgba(255,255,255,0.13)" }} />
               <div className="absolute -bottom-10 -left-4 w-36 h-36 rounded-full pointer-events-none" style={{ background: "rgba(255,255,255,0.06)" }} />
 
               {/* Icon + Title */}
               <div className="relative z-10 flex items-center gap-3">
-                <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0"
-                  style={{ background: "rgba(88,28,135,0.75)", color: "#fff" }}>
+                <div className="w-9 h-9 rounded-xl flex items-center justify-center shrink-0" style={ICON_BG}>
                   {sol.icon}
                 </div>
                 <div>
                   <h3 className="font-extrabold text-gray-900 text-sm leading-tight">{sol.title}</h3>
-                  <p className="text-xs mt-0.5" style={{ color: "rgba(88,28,135,0.75)" }}>{sol.category}</p>
+                  <p className="text-xs mt-0.5" style={SUBTITLE_COLOR}>{sol.category}</p>
                 </div>
               </div>
 
-              {/* Description */}
               <p className="relative z-10 text-gray-800/80 text-xs leading-relaxed flex-1 text-justify">{sol.desc}</p>
 
-              {/* Features */}
               <ul className="relative z-10 flex flex-col gap-1">
-                {sol.features.map((f) => (
+                {sol.features.map(f => (
                   <li key={f} className="flex items-start gap-1.5 text-xs text-gray-800/70">
                     <div className="w-1 h-1 rounded-full mt-1.5 shrink-0 bg-purple-900/40" />
                     {f}
                   </li>
                 ))}
               </ul>
+
+              {/* Indicador de detalhe */}
+              {sol.detailImage !== undefined && (
+                <div className="relative z-10 flex items-center gap-1 text-xs font-semibold mt-1" style={SUBTITLE_COLOR}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+                  ver detalhes
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
+
+      {selected && <SolutionModal sol={selected} onClose={() => setSelected(null)} />}
     </section>
   );
 }

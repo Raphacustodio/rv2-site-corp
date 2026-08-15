@@ -1,0 +1,24 @@
+<svg viewBox="0 0 380 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&amp;display=swap');
+    </style>
+  </defs>
+  <rect width="380" height="100" fill="#0A0F1A"/>
+  <!-- RV text -->
+  <text x="4" y="90"
+    font-family="'Barlow Condensed', Impact, 'Arial Narrow', sans-serif"
+    font-weight="900"
+    font-size="96"
+    fill="white"
+    letter-spacing="-3">RV</text>
+  <!-- diagonal slash -->
+  <polygon points="222,6 244,6 268,94 246,94" fill="white"/>
+  <!-- 2 -->
+  <text x="254" y="90"
+    font-family="'Barlow Condensed', Impact, 'Arial Narrow', sans-serif"
+    font-weight="900"
+    font-size="96"
+    fill="white"
+    letter-spacing="-3">2</text>
+</svg>

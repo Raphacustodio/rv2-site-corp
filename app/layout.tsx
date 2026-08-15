@@ -49,6 +49,9 @@ export const metadata: Metadata = {
     "rastreabilidade",
     "gestão de produção",
   ],
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+  },
   authors: [{ name: "RV2" }],
   creator: "RV2",
   alternates: {

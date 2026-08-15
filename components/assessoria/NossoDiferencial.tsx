@@ -18,9 +18,9 @@ export function NossoDiferencial() {
 
           {/* Direita */}
           <div className={`reveal ${visible ? "visible delay-2 from-right" : ""} flex flex-col gap-4 lg:border-l lg:border-gray-100 lg:pl-6`}>
-            <p className="text-gray-600 leading-relaxed">A experiência adquirida ao longo de mais de 20 anos na indústria têxtil inspira o desenvolvimento das soluções do RV2 Labs.</p>
-            <p className="text-gray-600 leading-relaxed">Cada software nasce de necessidades reais vividas pelos nossos clientes.</p>
-            <p className="text-sm italic text-gray-400 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed text-justify">A experiência adquirida ao longo de mais de 20 anos na indústria têxtil inspira o desenvolvimento das soluções do RV2 Labs.</p>
+            <p className="text-gray-600 leading-relaxed text-justify">Cada software nasce de necessidades reais vividas pelos nossos clientes.</p>
+            <p className="text-sm italic text-gray-400 leading-relaxed text-justify">
               Não desenvolvemos tecnologia por tendência.<br />Desenvolvemos tecnologia para resolver problemas reais.
             </p>
             <div className="h-px bg-gradient-to-r from-green-400 to-purple-500 rounded-full w-4/5 mx-auto" />

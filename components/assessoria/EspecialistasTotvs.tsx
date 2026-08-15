@@ -4,6 +4,7 @@ import { useReveal } from "@/hooks/useReveal";
 const AREAS = [
   "Implantação", "Processos", "Integrações",
   "BI TOTVS Moda", "Suporte", "Treinamentos",
+  "Sustentação TOTVS Moda", "Relatórios TOTVS Moda", "Revitalização TOTVS Moda",
 ];
 
 export function EspecialistasTotvs() {

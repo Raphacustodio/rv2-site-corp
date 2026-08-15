@@ -64,9 +64,9 @@ const SLIDES: Slide[] = [
     label: "Notify",
     heading: (
       <>
-        <span style={{ color: "#4ADE80" }}>Comunicação</span>
+        <span style={{ color: "#A78BFA" }}>Comunicação</span>
         <br />que mantém sua
-        <br />operação em
+        <br /><span style={{ color: "#4ADE80" }}>operação</span> em
         <br /><span style={{ color: "#FB923C" }}>movimento.</span>
       </>
     ),
@@ -81,7 +81,7 @@ const SLIDES: Slide[] = [
       <>
         App do <span style={{ color: "#A78BFA" }}>terceiro</span>
         <br />conectando sua
-        <br />operação a quem
+        <br /><span style={{ color: "#4ADE80" }}>operação</span> a quem
         <br /><span style={{ color: "#FB923C" }}>faz acontecer.</span>
       </>
     ),
@@ -94,9 +94,9 @@ const SLIDES: Slide[] = [
     label: "Motorista",
     heading: (
       <>
-        App do <span style={{ color: "#A78BFA" }}>motorista</span>
-        <br />roteiros inteligentes,
-        <br /><span style={{ color: "#FB923C" }}>entregas eficientes.</span>
+        App do <span style={{ color: "#FB923C" }}>motorista</span>
+        <br /><span style={{ color: "#A78BFA" }}>rota</span> inteligente,
+        <br />entregas <span style={{ color: "#4ADE80" }}>eficientes.</span>
       </>
     ),
     description: "O App do Motorista do RV2 Suite guia cada etapa da rota com precisão, conectando motoristas, coletas e entregas em tempo real.",

@@ -6,6 +6,7 @@ const NAV = [
   { label: "Clientes",   href: "#clientes"   },
   { label: "Assessoria", href: "#assessoria" },
   { label: "Labs",       href: "#labs"       },
+  { label: "Soluções",   href: "#solucoes"   },
 ];
 
 export function Header() {
@@ -37,21 +38,21 @@ export function Header() {
       }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2 shrink-0 lg:ml-8">
+        <a href="#" className="flex items-center gap-2 shrink-0">
           <Image
             src="/logos/rv2-logo.png"
             alt="RV2"
             width={48}
             height={28}
             style={{
-              height: 36,
+              height: 44,
               width: "auto",
               objectFit: "contain",
               marginTop: -12,
             }}
           />
           <span
-            className="text-[11px] font-bold leading-tight"
+            className="text-[13px] font-bold leading-tight"
           >
             <span style={{ color: "#16A34A" }}>ASSESSORIA</span>
             <span className="text-gray-300 mx-1">+</span>
@@ -66,7 +67,7 @@ export function Header() {
               key={item.href}
               href={item.href}
               className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-150"
-              style={{ color: "rgba(255,255,255,0.8)" }}
+              style={{ color: "rgba(255,255,255,1)", textShadow: "0 0 3px rgba(0,0,0,0.9), 0 1px 8px rgba(0,0,0,0.6)" }}
               onMouseEnter={e => {
                 (e.currentTarget as HTMLAnchorElement).style.color = "rgba(255,255,255,1)";
                 (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.08)";

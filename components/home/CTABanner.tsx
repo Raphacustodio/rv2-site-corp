@@ -5,6 +5,7 @@ export function CTABanner() {
   const { ref, visible } = useReveal();
   return (
     <section ref={ref as React.RefObject<HTMLElement>}
+      className="cta-bg-animate"
       style={{ backgroundColor: "#052E16" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 py-16 lg:py-20">
         <div className={`reveal ${visible ? "visible" : ""} flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8`}>

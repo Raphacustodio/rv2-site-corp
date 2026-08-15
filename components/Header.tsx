@@ -41,7 +41,7 @@ export function Header() {
         <a href="#" className="flex items-center gap-2 shrink-0">
           <Image
             src="/logos/rv2-logo.png"
-            alt="RV2"
+            alt="RV2 – Consultoria e Tecnologia para TOTVS Moda"
             width={0}
             height={0}
             style={{

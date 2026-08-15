@@ -8,7 +8,7 @@ export function Footer() {
 
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 shrink-0">
-            <Image src="/logos/rv2-logo.png" alt="RV2" width={0} height={0}
+            <Image src="/logos/rv2-logo.png" alt="RV2 – Consultoria e Tecnologia para TOTVS Moda" width={0} height={0}
               style={{ height: 44, width: "auto", objectFit: "contain", marginTop: -12 }} />
             <span className="text-[13px] font-bold leading-tight">
               <span style={{ color: "#4ADE80" }}>ASSESSORIA</span>

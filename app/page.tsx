@@ -21,6 +21,7 @@ export default function Home() {
   return (
     <main className="flex flex-col min-h-dvh">
       <Header />
+      <h1 className="sr-only">Tecnologia e Consultoria Especializada em TOTVS Moda</h1>
 
       {/* HOME */}
       <Hero />

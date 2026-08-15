@@ -14,7 +14,7 @@ type Slide = {
 const SLIDES: Slide[] = [
   {
     src: "/images/hero/hero_01.webp",
-    alt: "Conexões e integração de sistemas",
+    alt: "Consultoria e integração TOTVS Moda – RV2",
     label: "Conexões",
     heading: (
       <>
@@ -30,7 +30,7 @@ const SLIDES: Slide[] = [
   },
   {
     src: "/images/hero/hero_02.webp",
-    alt: "Indústria têxtil sofisticada",
+    alt: "Assessoria TOTVS Moda para indústria da moda – RV2",
     label: "Indústria",
     heading: (
       <>
@@ -45,7 +45,7 @@ const SLIDES: Slide[] = [
   },
   {
     src: "/images/hero/hero_03.webp",
-    alt: "Tecnologia, dados e sistemas",
+    alt: "BI e soluções tecnológicas para TOTVS Moda – RV2 Labs",
     label: "Tecnologia",
     heading: (
       <>
@@ -60,7 +60,7 @@ const SLIDES: Slide[] = [
   },
   {
     src: "/images/hero/hero_04.webp",
-    alt: "Notify — notificações e alertas",
+    alt: "RV2 Notify – Automação de comunicação integrada ao TOTVS Moda",
     label: "Notify",
     heading: (
       <>
@@ -75,7 +75,7 @@ const SLIDES: Slide[] = [
   },
   {
     src: "/images/hero/hero_05.webp",
-    alt: "Gestão de terceiros e parceiros",
+    alt: "RV2 Suite Terceiriza – Gestão de terceiros integrada ao TOTVS Moda",
     label: "Terceiros",
     heading: (
       <>
@@ -90,7 +90,7 @@ const SLIDES: Slide[] = [
   },
   {
     src: "/images/hero/hero_06.webp",
-    alt: "Logística e motoristas",
+    alt: "RV2 Suite Carrega e Coleta – Logística e rotas para indústria da moda",
     label: "Motorista",
     heading: (
       <>

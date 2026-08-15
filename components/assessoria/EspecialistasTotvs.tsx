@@ -18,8 +18,8 @@ export function EspecialistasTotvs() {
             <div>
               <p className="text-xs font-bold tracking-widest uppercase text-green-200 mb-3">RV2 ASSESSORIA</p>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white leading-snug mb-4">
-                Especialistas em TOTVS Moda<br />
-                <span className="text-green-200">para a indústria têxtil.</span>
+                Especialistas em TOTVS MODA<br />
+                <span className="text-green-200">e na indústria têxtil.</span>
               </h2>
             </div>
             <p className="text-green-100 leading-relaxed text-justify">

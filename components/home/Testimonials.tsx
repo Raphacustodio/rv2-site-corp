@@ -45,7 +45,7 @@ function TestimonialCard({ item }: { item: typeof TESTIMONIALS[0] }) {
       <QuoteIcon />
       {/* texto centralizado verticalmente no espaço disponível */}
       <div className="flex-1 flex items-center overflow-hidden">
-        <p className="text-gray-600 text-sm leading-relaxed line-clamp-7">{item.text}</p>
+        <p className="text-gray-600 text-sm leading-relaxed line-clamp-7 text-justify">{item.text}</p>
       </div>
       {/* autor fixo na base */}
       <div className="flex items-center gap-3 pt-4 border-t border-gray-100 mt-4 shrink-0">

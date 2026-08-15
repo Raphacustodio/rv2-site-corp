@@ -22,13 +22,13 @@ export function EspecialistasTotvs() {
                 <span className="text-green-200">para a indústria têxtil.</span>
               </h2>
             </div>
-            <p className="text-green-100 leading-relaxed">
+            <p className="text-green-100 leading-relaxed text-justify">
               A RV2 possui ampla experiência na implantação, evolução e sustentação do TOTVS Moda, atuando em diferentes áreas do ERP e acompanhando toda a jornada de crescimento dos clientes.
             </p>
-            <p className="text-green-100 leading-relaxed">
+            <p className="text-green-100 leading-relaxed text-justify">
               Nossa atuação envolve desde o planejamento inicial até a evolução contínua do ambiente, sempre buscando maior eficiência operacional e melhor aproveitamento da tecnologia.
             </p>
-            <p className="text-green-200 text-sm italic leading-relaxed">
+            <p className="text-green-200 text-sm italic leading-relaxed text-justify">
               Mais do que conhecer funcionalidades, entendemos como cada processo impacta a operação da indústria têxtil.
             </p>
           </div>

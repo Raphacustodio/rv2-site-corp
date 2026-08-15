@@ -22,13 +22,13 @@ export function NossaExperiencia() {
             <p className="text-gray-900 font-semibold leading-relaxed text-base">
               Não acreditamos em soluções genéricas.
             </p>
-            <p className="text-gray-500 leading-relaxed">
+            <p className="text-gray-500 leading-relaxed text-justify">
               Cada projeto é conduzido com base na realidade da empresa, respeitando seus processos, sua cultura e seus objetivos.
             </p>
-            <p className="text-gray-500 leading-relaxed">
+            <p className="text-gray-500 leading-relaxed text-justify">
               Ao longo de mais de 20 anos acompanhamos empresas da indústria têxtil em projetos de implantação, evolução e sustentação do TOTVS Moda.
             </p>
-            <p className="text-sm italic leading-relaxed pl-4 text-green-700"
+            <p className="text-sm italic leading-relaxed pl-4 text-green-700 text-justify"
               style={{ borderLeft: "2px solid #16A34A" }}>
               O resultado é uma visão que vai além do ERP — entendemos a operação, as pessoas e os desafios de cada empresa.
             </p>

@@ -95,7 +95,7 @@ export function NossasSolucoes() {
               </div>
 
               {/* Description */}
-              <p className="relative z-10 text-gray-800/80 text-xs leading-relaxed flex-1">{sol.desc}</p>
+              <p className="relative z-10 text-gray-800/80 text-xs leading-relaxed flex-1 text-justify">{sol.desc}</p>
 
               {/* Features */}
               <ul className="relative z-10 flex flex-col gap-1">

@@ -17,10 +17,10 @@ export function LabsIntro() {
                 <span className="text-purple-200">conhece</span> o têxtil.
               </h2>
             </div>
-            <p className="text-purple-100 leading-relaxed">
+            <p className="text-purple-100 leading-relaxed text-justify">
               O RV2 Labs desenvolve soluções que conectam processos, automatizam rotinas e resolvem desafios reais da indústria têxtil.
             </p>
-            <p className="text-purple-200 text-sm leading-relaxed">
+            <p className="text-purple-200 text-sm leading-relaxed text-justify">
               Cada produto nasce da experiência prática adquirida em mais de duas décadas de atuação em projetos de implantação, processos e evolução operacional.
             </p>
             <div className="flex gap-3 flex-wrap">
@@ -42,13 +42,13 @@ export function LabsIntro() {
             style={{ borderColor: "rgba(255,255,255,0.15)" }}>
             <p className="text-xs font-bold tracking-widest uppercase text-purple-200">POR QUE EXISTE O LABS?</p>
             <h3 className="text-xl font-extrabold text-white">Toda solução começa com um problema real.</h3>
-            <p className="text-purple-100 leading-relaxed">
+            <p className="text-purple-100 leading-relaxed text-justify">
               Durante anos acompanhamos empresas da indústria têxtil enfrentando desafios que muitas vezes não eram resolvidos apenas com o ERP.
             </p>
-            <p className="text-purple-100 leading-relaxed">
+            <p className="text-purple-100 leading-relaxed text-justify">
               Foi dessa experiência que nasceu o RV2 Labs. Cada software desenvolvido parte de uma necessidade identificada em operações reais.
             </p>
-            <p className="text-purple-200 text-sm italic leading-relaxed">
+            <p className="text-purple-200 text-sm italic leading-relaxed text-justify">
               Não criamos tecnologia por tendência.<br />Criamos tecnologia para resolver problemas.
             </p>
             <div className="h-px bg-gradient-to-r from-purple-300 to-purple-500 rounded-full mt-2" />

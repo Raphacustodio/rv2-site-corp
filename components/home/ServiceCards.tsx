@@ -82,7 +82,7 @@ export function ServiceCards() {
                 </div>
                 {/* Direita */}
                 <div className="flex items-center p-7 flex-1">
-                  <p className="text-gray-300 text-sm leading-relaxed max-w-xl">{card.description}</p>
+                  <p className="text-gray-300 text-sm leading-relaxed max-w-xl text-justify">{card.description}</p>
                 </div>
               </div>
             );

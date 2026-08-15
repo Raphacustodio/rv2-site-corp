@@ -11,11 +11,11 @@ const CARDS = [
     href: "#assessoria",
     icon: (
       <svg width="32" height="32" viewBox="0 0 28 28" fill="none">
-        <circle cx="14" cy="9" r="4" stroke="#16A34A" strokeWidth="1.6"/>
-        <circle cx="7" cy="12" r="2.5" stroke="#16A34A" strokeWidth="1.4"/>
-        <circle cx="21" cy="12" r="2.5" stroke="#16A34A" strokeWidth="1.4"/>
+        <circle cx="14" cy="9" r="4" stroke="currentColor" strokeWidth="1.6"/>
+        <circle cx="7" cy="12" r="2.5" stroke="currentColor" strokeWidth="1.4"/>
+        <circle cx="21" cy="12" r="2.5" stroke="currentColor" strokeWidth="1.4"/>
         <path d="M1 24c0-4 2.5-6 6-6M21 18c3.5 0 6 2 6 6M8 24c0-3.3 2.7-6 6-6s6 2.7 6 6"
-          stroke="#16A34A" strokeWidth="1.5" strokeLinecap="round"/>
+          stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -28,9 +28,9 @@ const CARDS = [
     href: "#labs",
     icon: (
       <svg width="32" height="32" viewBox="0 0 28 28" fill="none">
-        <rect x="3" y="4" width="22" height="16" rx="2" stroke="#7C3AED" strokeWidth="1.6"/>
-        <path d="M8 9l3 3-3 3M14 15h6" stroke="#7C3AED" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-        <path d="M10 24h8M14 20v4" stroke="#7C3AED" strokeWidth="1.5" strokeLinecap="round"/>
+        <rect x="3" y="4" width="22" height="16" rx="2" stroke="currentColor" strokeWidth="1.6"/>
+        <path d="M8 9l3 3-3 3M14 15h6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M10 24h8M14 20v4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -43,9 +43,9 @@ const CARDS = [
     href: undefined,
     icon: (
       <svg width="32" height="32" viewBox="0 0 28 28" fill="none">
-        <circle cx="14" cy="14" r="4" stroke="#374151" strokeWidth="1.6"/>
+        <circle cx="14" cy="14" r="4" stroke="currentColor" strokeWidth="1.6"/>
         <path d="M14 3v3M14 22v3M3 14h3M22 14h3M6.2 6.2l2.1 2.1M19.7 19.7l2.1 2.1M19.7 6.2l-2.1 2.1M8.3 19.7l-2.1 2.1"
-          stroke="#374151" strokeWidth="1.5" strokeLinecap="round"/>
+          stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
       </svg>
     ),
   },
@@ -73,7 +73,7 @@ export function ServiceCards() {
                   <div>
                     <p className="text-xs font-bold tracking-widest uppercase mb-4"
                       style={{ color: card.color + "99" }}>{card.tagline}</p>
-                    <div className="mb-4">{card.icon}</div>
+                    <div className="mb-4" style={{ color: card.titleColor ?? "white" }}>{card.icon}</div>
                     <h3 className="font-extrabold text-lg leading-tight" style={{ color: card.titleColor ?? "white" }}>{card.title}</h3>
                   </div>
                   {card.href && (

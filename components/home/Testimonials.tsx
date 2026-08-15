@@ -41,10 +41,14 @@ const N = TESTIMONIALS.length;
 
 function TestimonialCard({ item }: { item: typeof TESTIMONIALS[0] }) {
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col min-h-[300px] sm:min-h-[280px] lg:min-h-[260px]">
+    <div className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col h-[340px] sm:h-[320px] lg:h-[380px]">
       <QuoteIcon />
-      <p className="text-gray-600 text-sm leading-relaxed mb-5 flex-1">{item.text}</p>
-      <div className="flex items-center gap-3">
+      {/* texto centralizado verticalmente no espaço disponível */}
+      <div className="flex-1 flex items-center overflow-hidden">
+        <p className="text-gray-600 text-sm leading-relaxed line-clamp-7">{item.text}</p>
+      </div>
+      {/* autor fixo na base */}
+      <div className="flex items-center gap-3 pt-4 border-t border-gray-100 mt-4 shrink-0">
         <div className="w-10 h-10 rounded-full overflow-hidden border-2 border-green-100 shrink-0">
           <Image src={item.photo} alt={item.name} width={40} height={40} className="w-full h-full object-cover object-top" />
         </div>

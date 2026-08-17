@@ -24,11 +24,11 @@ const CLIENTS: Client[] = [
 
 export function ClientsCarousel() {
   return (
-    <section id="clientes" className="scroll-mt-16 pb-3 overflow-hidden" style={{ background: "transparent", marginTop: 48 }}>
+    <section id="clientes" className="scroll-mt-16 pb-3" style={{ background: "transparent", marginTop: 48 }}>
       <p className="text-center text-xs font-bold tracking-widest uppercase text-gray-400 mt-6 mb-6">
         ALGUMAS EMPRESAS QUE FAZEM PARTE DA NOSSA HISTÓRIA
       </p>
-      <div className="overflow-hidden"
+      <div className="max-w-7xl mx-auto overflow-hidden"
         style={{ maskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)" }}>
         <div className="ticker-track flex w-max items-center gap-0">
           {[...CLIENTS, ...CLIENTS].map((c, i) => (

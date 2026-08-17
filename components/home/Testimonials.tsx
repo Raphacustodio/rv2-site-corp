@@ -4,28 +4,32 @@ import { useState, useEffect, useRef } from "react";
 
 const TESTIMONIALS = [
   {
-    text: "Temos uma experiência com o Goterra e o Raphael, agora RV2, extremamente positiva ao longo desses anos. O trabalho é conduzido com transparência, diálogo e competência em cada entrega. Construímos uma parceria baseada em confiança e respeito, que contribui de forma importante para o desenvolvimento da Agora Sou Mãe. Entender o cliente e entregar além de soluções engessadas que encontramos por aí faz parte do perfil da rapaziada.",
-    name: "Natanael Andrade", role: "Coordenador de TI", company: "Agora Sou Mãe", photo: "/testimonials/natanael.jpg",
-  },
-  {
-    text: "A RV2 transformou a gestão dos nossos processos! A agilidade no atendimento e a precisão para resolver desde os problemas mais simples até os mais complexos fazem toda a diferença. Além disso, o suporte no treinamento da nossa equipe é impecável. Uma parceria realmente fundamental para o meu time!",
-    name: "Walmir Mendes Júnior", role: "Diretor", company: "Tookas", photo: "/testimonials/walmir.jpg",
-  },
-  {
-    text: "Desde que iniciamos a parceria com a RV2, a consultoria tem sido fundamental para a evolução dos nossos processos. Com um atendimento próximo e muito conhecimento em TOTVS Moda, eles nos ajudaram a otimizar rotinas, aumentar a agilidade das operações e tornar a gestão da empresa muito mais eficiente. Hoje temos mais organização, segurança nas informações e decisões mais assertivas. Recomendo o trabalho pela competência, comprometimento e pelos resultados que entregam.",
-    name: "Lilian Lais da Silva", role: "Controller", company: "Daksul Jeans", photo: "/testimonials/lilian.jpg",
+    text: "A parceria com o Rodrigo e o Rapha, da RV2, faz toda a diferença no nosso dia a dia. Além de conhecerem bem nossa operação, eles estão sempre disponíveis para apoiar, orientar e contribuir com melhorias além do TOTVS Moda, seja na resolução de problemas, nas atualizações do ERP ou na evolução dos nossos processos. Ter parceiros próximos, que entendem a realidade da empresa e caminham junto conosco, nos dá mais segurança para evoluir continuamente e aproveitar cada vez melhor a tecnologia em favor do nosso negócio.",
+    name: "Fagner Civinski", role: "Gestor de TI", company: "Mensageiro dos Sonhos", photo: "/testimonials/fagner.jpg",
   },
   {
     text: "A parceria com o Raphael Custódio e o Rodrigo Goterra foi fundamental em toda a nossa trajetória com o TOTVS Moda. Mais do que nos apoiar na implantação do sistema, eles estiveram presentes nos desafios do dia a dia, sempre buscando entender nossa operação e encontrar as melhores soluções para as nossas necessidades. Ao longo dos anos, construímos uma relação de muita confiança, em que podemos contar com o conhecimento, a disponibilidade e o comprometimento deles para superar problemas e evoluir nossos processos. Sem dúvida, foram parceiros essenciais para que o TOTVS Moda se tornasse uma ferramenta cada vez mais importante para a nossa gestão.",
     name: "Rafael Holthausen", role: "Controller", company: "Vanelise", photo: "/testimonials/rafael.png",
   },
   {
-    text: "A parceria com o Rodrigo e o Rapha, da RV2, faz toda a diferença no nosso dia a dia. Além de conhecerem bem nossa operação, eles estão sempre disponíveis para apoiar, orientar e contribuir com melhorias além do TOTVS Moda, seja na resolução de problemas, nas atualizações do ERP ou na evolução dos nossos processos. Ter parceiros próximos, que entendem a realidade da empresa e caminham junto conosco, nos dá mais segurança para evoluir continuamente e aproveitar cada vez melhor a tecnologia em favor do nosso negócio.",
-    name: "Fagner Civinski", role: "Gestor de TI", company: "Mensageiro dos Sonhos", photo: "/testimonials/fagner.jpg",
+    text: "Desde que iniciamos a parceria com a RV2, a consultoria tem sido fundamental para a evolução dos nossos processos. Com um atendimento próximo e muito conhecimento em TOTVS Moda, eles nos ajudaram a otimizar rotinas, aumentar a agilidade das operações e tornar a gestão da empresa muito mais eficiente. Hoje temos mais organização, segurança nas informações e decisões mais assertivas. Recomendo o trabalho pela competência, comprometimento e pelos resultados que entregam.",
+    name: "Lilian Lais da Silva", role: "Controller", company: "Daksul Jeans", photo: "/testimonials/lilian.jpg",
+  },
+  {
+    text: "Trabalhar com a RV2 tem sido uma experiência muito positiva. Mais do que uma empresa de consultoria, encontramos uma parceira que entende de fato os desafios da indústria têxtil e, principalmente, sabe transformar necessidades do dia a dia em soluções práticas. O conhecimento em TOTVS Moda, aliado à experiência e à proximidade com o cliente, faz toda a diferença. Sempre tivemos um atendimento muito próximo, com transparência, comprometimento e foco em encontrar a melhor solução para cada situação. Para nós, ter a RV2 como parceira significa contar com conhecimento técnico, experiência e confiança para evoluir continuamente nossos processos e nossa tecnologia.",
+    name: "Fernando Cabral", role: "TI", company: "Grupo Gato Mia", photo: "/testimonials/fernando-gato-mia.jpg",
+  },
+  {
+    text: "Temos uma experiência com o Goterra e o Raphael, agora RV2, extremamente positiva ao longo desses anos. O trabalho é conduzido com transparência, diálogo e competência em cada entrega. Construímos uma parceria baseada em confiança e respeito, que contribui de forma importante para o desenvolvimento da Agora Sou Mãe. Entender o cliente e entregar além de soluções engessadas que encontramos por aí faz parte do perfil da rapaziada.",
+    name: "Natanael Andrade", role: "Coordenador de TI", company: "Agora Sou Mãe", photo: "/testimonials/natanael.jpg",
   },
   {
     text: "Nossa parceria com a RV2 tem sido muito positiva. Mesmo com todo o atendimento sendo remoto, eles conseguem estar muito próximos no dia a dia, com muita agilidade no atendimento e, principalmente, com a sensibilidade de entender a nossa necessidade e encontrar a melhor solução para cada situação. O conhecimento técnico faz toda a diferença, mas o que realmente destaca a RV2 é a capacidade de ouvir, entender o contexto e não simplesmente oferecer uma solução pronta. Eles procuram entender o que precisamos e, a partir disso, encontrar o melhor caminho. Essa parceria tem nos ajudado a ganhar mais agilidade e eficiência nos processos, sempre com muita confiança e troca de conhecimento. É aquele tipo de fornecedor que, com o tempo, deixa de ser apenas fornecedor e passa a ser um verdadeiro parceiro do negócio.",
     name: "Guilherme Peres", role: "Gestão de Tecnologia", company: "Vest Surf", photo: "/testimonials/guilherme.jpg",
+  },
+  {
+    text: "A RV2 transformou a gestão dos nossos processos! A agilidade no atendimento e a precisão para resolver desde os problemas mais simples até os mais complexos fazem toda a diferença. Além disso, o suporte no treinamento da nossa equipe é impecável. Uma parceria realmente fundamental para o meu time!",
+    name: "Walmir Mendes Júnior", role: "Diretor", company: "Tookas", photo: "/testimonials/walmir.jpg",
   },
 ];
 
@@ -73,7 +77,7 @@ export function Testimonials() {
   };
 
   useEffect(() => {
-    const id = setInterval(() => goTo((activeRef.current + 1) % N), 7000);
+    const id = setInterval(() => goTo((activeRef.current + 1) % N), 20000);
     return () => clearInterval(id);
   }, []);
 

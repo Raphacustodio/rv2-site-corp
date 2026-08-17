@@ -67,19 +67,19 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     images: [
       {
-        url: `${SITE_URL}/logos/rv2-logo-transparent.png`,
-        width: 512,
-        height: 512,
+        url: `${SITE_URL}/og-image.png`,
+        width: 1200,
+        height: 630,
         alt: "RV2 – Consultoria e Tecnologia para TOTVS Moda",
       },
     ],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "RV2 | Consultoria, Suporte e BI para TOTVS Moda",
     description:
       "Consultoria, suporte e BI para TOTVS Moda. Especialistas em implantação, integrações e processos para empresas da indústria têxtil e da moda.",
-    images: [`${SITE_URL}/logos/rv2-logo-transparent.png`],
+    images: [`${SITE_URL}/og-image.png`],
   },
 };
 
